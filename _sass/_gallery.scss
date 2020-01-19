@@ -1,20 +1,30 @@
-@media only screen and (min-width: 600px) {
 .image-gallery {
-    background: #efefef;
-    .container {
-	display: flex;
-    flex-wrap: wrap;
+  background: #efefef;
 
-    .image {
-        flex: 3rem;
-        display: block;
-        margin: 5px;
+  img {
+    max-width: 100%;
+    display: block;
+  }
 
-        img {
-            width: 100%;
-            display: block;
-        }
+  .image {
+    margin-bottom: 10px;
+    display: block;
+    &:last-child {
+      margin-bottom: 0;
     }
+  }
 }
-}
+
+@media only screen and (min-width: 600px) {
+  .image-gallery {
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+
+      .image {
+        flex: 3rem;
+        margin: 5px;
+      }
+    }
+  }
 }

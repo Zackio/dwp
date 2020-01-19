@@ -9,7 +9,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link href="./css/styles.css?v5" rel="stylesheet" type="text/css">
+  <link href="./css/styles.css?v6" rel="stylesheet" type="text/css">
 
   <link href="https://fonts.googleapis.com/css?family=Ibarra+Real+Nova|Open+Sans&display=swap" rel="stylesheet">
 
@@ -49,7 +49,7 @@
     <div class="container">
       {% for image in   site.static_files %}
       {% if image.path contains 'images/gallery/thumbs/' %}
-      <a class="image" href="{{ site.baseurl }}../{{ image.path }}">
+      <a class="image" href="{{ site.baseurl }}/images/gallery/{{ image.name }}">
         <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
       </a>
       {% endif %}
