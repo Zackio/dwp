@@ -1,8 +1,8 @@
 # David Waugh
 
-***Thatcham based plaster***
+***Thatcham based plasterer***
 
 33 years experience in plastering trade
 
-[ABOUT](/#about)
-[CONTACT](/#contact)
+[ABOUT](./#about)
+[CONTACT](./#contact)
