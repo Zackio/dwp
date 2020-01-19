@@ -1,6 +1,9 @@
 .contact {
-  background: #eee;
-  text-align: center;
+  // background: #efefef;
+
+  .image {
+    @include image;
+  }
 
   p:last-of-type {
     margin-bottom: 40px
@@ -8,7 +11,6 @@
 
   form {
     width: 300px;
-    margin: auto;
   }
 
   select,
@@ -20,7 +22,7 @@
     height: 63px;
     box-sizing: border-box;
     background: #fff;
-    border: 4px solid #489e9b ;
+    border: 2px solid $color-main;
     font-size: 1em;
   }
 
@@ -39,10 +41,10 @@ input[type=submit] {
   width: 100%;
   margin: 23px auto 0;
   border: none;
-  background: #489e9b;
-  padding: 20px;
   color: white;
+  padding: 20px;
+  background-color: $color-second;
   text-transform: uppercase;
-  font-size: 1.5em;
+  font-size: 1.2em;
   line-height: 0;
 }

@@ -1,0 +1,20 @@
+@media only screen and (min-width: 600px) {
+.image-gallery {
+    background: #efefef;
+    .container {
+	display: flex;
+    flex-wrap: wrap;
+
+    .image {
+        flex: 3rem;
+        display: block;
+        margin: 5px;
+
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
+}
+}
+}

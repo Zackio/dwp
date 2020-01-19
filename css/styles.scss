@@ -1,12 +1,38 @@
 ---
 ---
 
+$color-main:#cee8e4;
+$color-second: #247BA0;
+
+@mixin image {
+    width: 200px;
+    padding-bottom: 20px; 
+
+    @media only screen and (min-width: 800px) {
+        float: left;
+        padding: 20px 60px 0 0;
+    }
+
+    img {
+        width: 100%;
+        border-radius: 50%;
+        border: 10px solid rgba(0, 0, 0, 0.1);
+    }
+
+}
+
+@import 'banner';
 @import 'contact';
+@import 'gallery';
 
 html, body {
     font-family: 'Lato', sans-serif;
     font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
+
+    @media only screen and (min-width: 600px) {
+        font-size: 20px;
+    }
     margin: 0;
     padding: 0;
     color: #536167;
@@ -17,7 +43,7 @@ font-family: 'Ibarra Real Nova', serif;
 }
 
 h2 {
-    color: #247BA0;
+    color: $color-second;
     font-size: 2em;
 }
 
@@ -25,61 +51,27 @@ a {
     color: inherit;
 }
 
+
+.col {
+overflow: hidden;
+}
+
 .about {
-    // background: #FFCDB2;
+    .image {
+        @include image;
+    }
 }
 
 section {
     padding: 80px 0;
-    .h2 {
-        font-size: 1.4em
+    h2 {
+        margin-top: 0;
     }
 }
 
 
 .container  {
-    width: 800px;
+    max-width: 900px;
     margin: auto;
     padding: 0 40px;
-}
-
-.banner {
-    // background-image: url(../images/background.jpg);
-    background-position: center;
-    background-size: cover;
-    background-color: #cee8e4;
-    font-size: 1.5em;
-    height: 300px;
-    // text-align: center;
-    // padding: 0;
-    overflow: hidden;
-
-    .container {
-        position: relative;
-        z-index: 1;
-    }
-
-    h1 {
-        font-size: 2.6em;
-        margin: 0;
-        line-height: 1em;
-    }
-
-    a {
-        font-size: 0.6em;
-        padding-right: 10px;
-        font-family: 'Ibarra Real Nova', serif;
-        font-weight: bolder;
-    }
-
-    em {
-        font-size: 1.3em;
-        margin: 0;
-        line-height: 0.8em
-    }
-
-    p {
-        font-size: 1em;
-    }
-
 }

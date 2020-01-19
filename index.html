@@ -7,10 +7,12 @@
   <meta charset="utf-8">
   <title>{{ page.title }}</title>
 
-  <link href="./css/styles.css?v4" rel="stylesheet" type="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="./css/styles.css?v5" rel="stylesheet" type="text/css">
 
   <link href="https://fonts.googleapis.com/css?family=Ibarra+Real+Nova|Open+Sans&display=swap" rel="stylesheet">
-      
+
 </head>
 
 <body>
@@ -20,34 +22,67 @@
 
   <section class="banner">
     <div class="container">
-        {{ banner-text | markdownify }}
+
+      <div class="image">
+        <img src="./images/banner.jpg" alt="">
+      </div>
+
+      {{ banner-text | markdownify }}
+
     </div>
   </section>
 
-  <section class="about">
+  <section id="about" class="about">
     <div class="container">
-        {{ about-text | markdownify }}  
+
+      <div class="image">
+        <img src="./images/about.jpeg" alt="">
+      </div>
+
+      <div class="col">
+        {{ about-text | markdownify }}
+      </div>
     </div>
   </section>
 
-  <section class="contact">
+  <section class="image-gallery">
+    <div class="container">
+      {% for image in   site.static_files %}
+      {% if image.path contains 'images/gallery/thumbs/' %}
+      <a class="image" href="{{ site.baseurl }}../{{ image.path }}">
+        <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+      </a>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
 
     <div class="container">
 
-      {{ contact-text | markdownify }}  
+      <div class="image">
+        <img src="./images/contact.jpg" alt="">
+      </div>
 
-          <form action="https://formspree.io/zackary.allnutt@gmail.com"
-                method="POST">
-              <input type="text" name="name" placeholder="Name">
-              <input type="email" name="_replyto" placeholder="Email">
-              <textarea name="message"></textarea>
-              <input type="submit" value="Send">
-          </form>
+      <div class="col">
+        {{ contact-text | markdownify }}
 
-      
+        <form action="https://formspree.io/davidwaughplastering@virginmedia.com" method="POST">
+          <input type="text" name="name" placeholder="Name">
+          <input type="email" name="_replyto" placeholder="Email">
+          <textarea name="message"></textarea>
+          <input type="submit" value="Send">
+        </form>
+      </div>
+
+
     </div>
   </section>
 
+
+  <script type="text/javascript" src="/js/lightbox.js"></script>
+<link rel="stylesheet" href="/css/lightbox.css">
 
 </body>
 
