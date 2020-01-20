@@ -3,6 +3,7 @@
 
 $color-main:#cee8e4;
 $color-second: #247BA0;
+$color-section: #efefef;
 
 @mixin image {
     width: 200px;
@@ -74,4 +75,12 @@ section {
     max-width: 900px;
     margin: auto;
     padding: 0 40px;
+}
+
+footer {
+    background: $color-section;
+    color: gray;
+    text-align: right;
+    font-size: 0.7em;
+    padding: 20px 0;
 }
