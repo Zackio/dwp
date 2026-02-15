@@ -35,7 +35,7 @@ title: David Waugh Plasterer - Thatcham
     <div class="container">
       {% for image in   site.static_files %}
       {% if image.path contains 'images/gallery/thumbs/' %}
-      <a class="image" href="{{ site.baseurl }}/images/gallery/{{ image.name }}">
+      <a class="image" href="./images/gallery/{{ image.name }}">
         <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
       </a>
       {% endif %}
